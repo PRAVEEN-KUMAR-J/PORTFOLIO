@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ChevronDown, Mail, Phone, Download } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
+import profileImage from '../../assets/profile.jpg?url';
 
 const Hero: React.FC = () => {
   const { theme } = useTheme();
@@ -42,7 +43,7 @@ const Hero: React.FC = () => {
               style={{ filter: 'blur(10px)' }}
             ></div>
             <img 
-              src="https://images.pexels.com/photos/7148384/pexels-photo-7148384.jpeg?auto=compress&cs=tinysrgb&w=800" 
+              src={profileImage} 
               alt="Praveen Kumar J" 
               className={`rounded-full object-cover w-full h-full relative z-10 border-4 ${
                 theme === 'dark' ? 'border-gray-800' : 'border-white/50'
